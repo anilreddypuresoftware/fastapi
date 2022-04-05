@@ -26,9 +26,18 @@ jobs:
       run: |
         conda install pytest
         pip install fastapi
+        pip install "uvicorn[standard]"
         pip install mkdocs
+        pip install typer
         python3.8 -m pip install flit
         flit install --symlink
         bash scripts/lint.sh
+        pip install orjson
+        pip install python-multipart
+        pip install databases
+        pip install httpx
+        pip install email_validator
+        pip install jose
+        pip install aisoqlite
         bash scripts/test.sh
         
