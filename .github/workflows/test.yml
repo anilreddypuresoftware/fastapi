@@ -68,6 +68,7 @@ jobs:
               pip install httpx && \
               pip install email_validator && \
               pip install jose && \
+              pip install pytest && \
               
               bash scripts/test.sh && \
               deactivate'
