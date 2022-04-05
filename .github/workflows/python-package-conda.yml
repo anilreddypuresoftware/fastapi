@@ -38,6 +38,6 @@ jobs:
         pip install httpx
         pip install email_validator
         pip install jose
-        pip install aisoqlite
+        
         bash scripts/test.sh
         
