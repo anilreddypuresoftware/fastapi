@@ -56,5 +56,15 @@ jobs:
               source py38-venv/bin/activate && \
               pip install fastapi && \
               pip install flit && \
+              pip install mkdocs && \
+              pip install typer && \
+        
+              pip install orjson && \
+              pip install python-multipart && \
+              pip install databases && \
+              pip install httpx && \
+              pip install email_validator && \
+              pip install jose && \
+              
               bash scripts/test.sh && \
               deactivate'
