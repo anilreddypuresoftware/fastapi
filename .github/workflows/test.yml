@@ -70,5 +70,5 @@ jobs:
               pip install jose && \
               pip install pytest && \
               
-              bash scripts/test.sh && \
+              bash scripts/test.sh --asyncio-mode=strict && \
               deactivate'
