@@ -27,7 +27,7 @@ jobs:
         conda install pytest
         pip install fastapi
         python3.8 -m pip install flit
-        python3.8 ./scripts/docs.py build-all
+        flit install --symlink
         bash scripts/lint.sh
         bash scripts/test.sh
         
