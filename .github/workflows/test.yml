@@ -47,6 +47,9 @@ jobs:
         - name: Set up QEMU
           id: qemu
           uses: docker/setup-qemu-action@v1
+          with :
+              path: ${{ env.pythonLocation }}
+              key: ${{ runner.os }}-python-${{ env.pythonLocation }}-${{ hashFiles('pyproject.toml') }}-test
         - name: Install and Run tests
           run: |
             docker run --rm -v ${{ github.workspace }}:/ws:rw --workdir=/ws \
@@ -59,7 +62,7 @@ jobs:
               pip install mkdocs && \
               pip install typer && \
         
-              pip install orjson && \
+              
               pip install python-multipart && \
               pip install databases && \
               pip install httpx && \
