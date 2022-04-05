@@ -56,7 +56,5 @@ jobs:
               source py38-venv/bin/activate && \
               pip install fastapi && \
               pip install flit && \
-              pip install mypy && \
-              bash scripts/lint.sh && \
               bash scripts/test.sh && \
               deactivate'
