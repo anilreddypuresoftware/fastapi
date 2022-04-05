@@ -26,6 +26,7 @@ jobs:
       run: |
         conda install pytest
         pip install fastapi
+        pip install mkdocs
         python3.8 -m pip install flit
         flit install --symlink
         bash scripts/lint.sh
